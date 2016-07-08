@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <title>test marquee</title>
+    <style>
+        div {
+            background: #dcdcdc;
+        }
+
+        .wrapper {
+            width: 300px;
+            overflow: hidden;
+            position: relative;
+            height: 50px;
+        }
+
+        .inner {
+            white-space: nowrap;
+            display: inline-block;
+            font-size: 0;
+            height: 50px;
+        }
+
+        .item {
+            width: 50px;
+            display: inline-block;
+            font-size: 16px;
+            height: 50px;
+        }
+
+        .wrapper2 {
+            margin-top: 30px;
+            height: 300px;
+            overflow: hidden;
+        }
+
+        .item2 {
+            height: 50px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="inner">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item">10</div>
+    </div>
+</div>
+<div class="wrapper2">
+    <div class="inner2">
+        <div class="item2">1</div>
+        <div class="item2">2</div>
+        <div class="item2">3</div>
+        <div class="item2">4</div>
+        <div class="item2">5</div>
+        <div class="item2">6</div>
+        <div class="item2">7</div>
+        <div class="item2">8</div>
+        <div class="item2">9</div>
+        <div class="item2">10</div>
+    </div>
+</div>
+<script src="http://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="../marquee.js"></script>
+<script src="./index.js"></script>
+<script>
+</script>
+</body>
+</html>

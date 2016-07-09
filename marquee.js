@@ -53,7 +53,7 @@
             height: ctx.$inner.css('height')
         });
 
-        ctx.$clone = $(ctx.$target.html());
+        ctx.$clone = $(ctx.$inner.clone(true));
 
         ctx.$wrapper = $('<div></div>');
         ctx.$wrapper.css({
@@ -131,7 +131,7 @@
                     lastPauseMoment = now;
                     lastMoment = null;
 
-                    if (itemIndex < length) {
+                    if (itemIndex < length - 1) {
                         lastMove = -snapStepSize;
                         itemIndex++;
                     }

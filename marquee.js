@@ -24,11 +24,12 @@
     }
 
     Marquee.prototype.start = function () {
+        this.isManualStop = false;
         this.$target.trigger('marqueeStart');
     };
 
     Marquee.prototype.stop = function () {
-        this.isStop = true;
+        this.isManualStop = true;
     };
 
     var MAP = {
@@ -84,6 +85,10 @@
         var smoothSize = $inner[MAP[direction].outer]();
 
         function smoothLoop() {
+            if (ctx.isManualStop) {
+                return;
+            }
+
             if (ctx.isStop) {
                 return;
             }
@@ -118,6 +123,10 @@
         var snapStepSize = 0;
 
         function snapLoop() {
+            if (ctx.isManualStop) {
+                return;
+            }
+
             if (ctx.isStop) {
                 return;
             }
